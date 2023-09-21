@@ -38,7 +38,7 @@ public class BankTest {
         open("http://localhost:9999/");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Галкин Александр");
-        form.$("[data-test-id=phone] input").setValue("89310015539");
+        form.$("[data-test-id=phone] input").setValue("8931001553");
         form.$("[data-test-id=agreement]").click();
         form.$("button").click();
         form.$("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
@@ -71,7 +71,7 @@ public class BankTest {
         form.$("[data-test-id=name] input").setValue("Назин Леонид");
         form.$("[data-test-id=phone] input").setValue("+79043329982");
         form.$("button").click();
-        form.$("[data-test-id=agreement]").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
+        form.$("[data-test-id=agreement]").shouldHave(exactText("Я не соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
 
 }
