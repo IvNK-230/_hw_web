@@ -71,7 +71,7 @@ public class BankTest {
         form.$("[data-test-id=name] input").setValue("Назин Леонид");
         form.$("[data-test-id=phone] input").setValue("+79043329982");
         form.$("button").click();
-        form.$("[data-test-id=agreement]").shouldHave(exactText("Я не соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
+        form.$("[data-test-id=agreement]").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
 
 }
